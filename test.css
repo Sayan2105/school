@@ -1,0 +1,12 @@
+body{
+    height: 900vh;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background: url(images/AdmissionImg.webp);
+    background-attachment: fixed;
+}

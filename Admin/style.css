@@ -1,0 +1,28 @@
+/* Additional Custom Styles */
+.table {
+    margin-top: 20px; /* Space above table */
+}
+
+/* Button styles for edit/delete */
+.btn {
+    margin-right: 5px; /* Space between buttons */
+}
+
+/* Navbar and sidebar text styles */
+.navbar-dark .nav-link {
+    color: rgba(255, 255, 255, 0.9); /* Brighter navbar links */
+}
+
+.navbar-dark .nav-link:hover {
+    color: #FFC107; /* Hover color for navbar links */
+}
+
+.sidebar-dark-primary .nav-link.active {
+    background-color: #6C63FF; /* Active sidebar link color */
+}
+
+/* Card styles */
+.card-header {
+    background-color: #6C63FF; /* Card header background */
+    color: white; /* Card header text color */
+}
