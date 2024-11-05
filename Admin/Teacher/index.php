@@ -106,7 +106,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Student Performance</h5>
                             <p class="card-text">View grades, assignments, and progress reports.</p>
-                            <a href="#" class="btn btn-info">View Performance</a>
+                            <a href="../admin_Students.php" class="btn btn-info">View Performance</a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Leave Application</h5>
                             <p class="card-text">Do you want to take a leave?</p>
-                            <a href="#" class="btn btn-info">Request Leave</a>
+                            <a href="Teacher-Leave.php" class="btn btn-info">Request Leave</a>
                         </div>
                     </div>
                 </div>
