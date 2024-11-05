@@ -13,7 +13,7 @@ $teacherStmt = $conn->prepare($teacherQuery);
 $teacherStmt->bind_param("s", $name);
 $teacherStmt->execute();
 $teacherResult = $teacherStmt->get_result();
-$teacherInfo = $teacherResult->fetch_assoc();
+$row = $teacherResult->fetch_assoc();
 
 // Second query to get timetable information
 $timetableQuery = "SELECT tt.*, tbi.name AS teacherName 
@@ -41,39 +41,21 @@ $timetableResult = $timetableStmt->get_result();
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
-        <nav class="col-md-3 col-lg-2 sidebar p-3">
-            <h4 class="text-center">Dashboard Menu</h4>
-            <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link active" href="index.php">Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Class Management</a></li>
-                <!-- Add other menu items -->
-            </ul>
-        </nav>
+        <?php
+            include('sidebar.php');
+        ?>
 
         <!-- Main Content -->
         <main class="col-md-9 col-lg-10 main-content">
             <div class="header">
-                <h2>Welcome, <?php echo htmlspecialchars($teacherInfo['Name']); ?>!</h2>
+                <h2>Welcome, <?php echo htmlspecialchars($row['Name']); ?>!</h2>
                 <p>Your Time Table is here</p>
             </div>
 
             <!-- Hero Section -->
-            <div class="hero">
-                <img src="https://via.placeholder.com/100" class="hero-img" alt="Teacher's Image">
-                <div class="hero-details">
-                    <?php if ($teacherInfo) { ?>
-                        <h5>Name: <?php echo htmlspecialchars($teacherInfo['Name']); ?></h5>
-                        <p>Age: <?php echo htmlspecialchars($teacherInfo['Age']); ?></p>
-                        <p>Gender: <?php echo htmlspecialchars($teacherInfo['Gender']); ?></p>
-                        <p>Subject: <?php echo htmlspecialchars($teacherInfo['Subject']); ?></p>
-                        <p>Email: <?php echo htmlspecialchars($teacherInfo['Email']); ?></p>
-                        <p>Phone: <?php echo htmlspecialchars($teacherInfo['Phone']); ?></p>
-                        <p>Address: <?php echo htmlspecialchars($teacherInfo['Address']); ?></p>
-                    <?php } else { ?>
-                        <p>No information found for this teacher. Name: <?php echo htmlspecialchars($name); ?></p>
-                    <?php } ?>
-                </div>
-            </div>
+            <?php
+                include('Hero.php');
+            ?>
 
             <!-- Timetable Section -->
             <section class="content">

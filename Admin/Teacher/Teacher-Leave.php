@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Dashboard | Salary</title>
+    <title>Teacher Dashboard | Leave</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -30,64 +30,21 @@
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
-        <nav class="col-md-3 col-lg-2 sidebar p-3">
-            <h4 class="text-center">Dashboard Menu</h4>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="timeTable.php">Class Management</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Student Performance</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Lesson Planning</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Assessment Tools</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Messages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Calendar & Reminders</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Professional Development</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
-                </li>
-            </ul>
-        </nav>
+        <?php
+            include('sidebar.php');
+        ?>
 
         <!-- Main Content -->
         <main class="col-md-9 col-lg-10 main-content">
             <div class="header">
                 <h2>Welcome, <?php echo $row['Name'] ?> !</h2>
-                <p>This is your salary page.</p>
+                <p>Get all your leave information here.</p>
             </div>
 
             <!-- Hero Section -->
-            <div class="hero">
-                <!-- <img src="https://via.placeholder.com/100" class="hero-img" alt="Teacher's Image"> -->
-                <div class="hero-details">
-                    <?php if($row) { ?> 
-                        <h5>Name: <?php echo $row['Name']; ?></h5> 
-                        <p>Age: <?php echo $row['Age']; ?></p> 
-                        <p>Gender: <?php echo $row['Gender']; ?></p>
-                        <p>Subject: <?php echo $row['Subject']; ?></p> 
-                        <p>Email: <?php echo $row['Email']; ?></p> 
-                        <p>Phone: <?php echo $row['Phone']; ?></p> 
-                        <p>Address: <?php echo $row['Address']; ?></p> 
-                    <?php } else { ?>
-                        <p>No information found for this teacher. where ID = <?php echo $name ?></p>
-                    <?php } ?>
-                </div>
-            </div>
-
+            <?php
+                include('Hero.php');
+            ?>
                 
             <div class="hero">
     <h4>Leave Application</h4>

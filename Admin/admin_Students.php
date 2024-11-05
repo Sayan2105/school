@@ -45,56 +45,6 @@ $result = mysqli_query($conn, $query);
                 </li>
             </ul>
         </nav>
-        
-        <!-- Sidebar -->
-        <aside class="main-sidebar sidebar-dark-primary">
-            <a href="admin_dashboard.php" class="brand-link">
-                <span class="admin-dshbrd">Admin Dashboard</span>
-            </a>
-            <div class="sidebar">
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
-                        <li class="nav-item">
-                            <a href="adminMain.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_password.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Passwords</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_admission.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Admission</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_messages.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Messages</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_Students.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Students</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="textList.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Website Contents</p>
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </aside>
  
         <!-- Content Wrapper -->
         <div class="content-wrapper">

@@ -71,7 +71,7 @@ $result = mysqli_query($conn, $query);
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="admin_Students.php" class="nav-link">
+                            <a href="admin_Students.php" target="_blank" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Students</p>
                             </a>
