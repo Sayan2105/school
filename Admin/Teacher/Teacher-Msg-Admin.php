@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Dashboard</title>
+    <title>Teacher Dashboard | Salary</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -67,12 +67,12 @@
         <main class="col-md-9 col-lg-10 main-content">
             <div class="header">
                 <h2>Welcome, <?php echo $row['Name'] ?> !</h2>
-                <p>Your weekly time table is here.</p>
+                <p>This is your salary page.</p>
             </div>
 
             <!-- Hero Section -->
             <div class="hero">
-                <img src="https://via.placeholder.com/100" class="hero-img" alt="Teacher's Image">
+                <!-- <img src="https://via.placeholder.com/100" class="hero-img" alt="Teacher's Image"> -->
                 <div class="hero-details">
                     <?php if($row) { ?> 
                         <h5>Name: <?php echo $row['Name']; ?></h5> 
@@ -88,73 +88,56 @@
                 </div>
             </div>
 
-            <div class="row g-3">
-                <!-- Class Management Card -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Time Table</h5>
-                            <p class="card-text">Manage schedules, attendance, and student rosters.</p>
-                            <a href="timeTable.php" class="btn btn-info">Go to Class Management</a>
+                
+            <div class="hero">
+                <h4>Message to the Admin</h4>
+                    <form class="row px-5 g-3" method="POST" action="send_message.php">
+                        <div class="col-md-4">
+                            <label for="teacherId" class="form-label">Teacher ID</label>
+                            <input type="text" class="form-control" id="teacherId" value="<?php echo $row['ID'] ?>" name="teacher_id" readonly required>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Student Performance Card -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Student Performance</h5>
-                            <p class="card-text">View grades, assignments, and progress reports.</p>
-                            <a href="../admin_Students.php" class="btn btn-info">View Performance</a>
+                        <div class="col-md-4">
+                            <label for="teacherName" class="form-label">Teacher Name</label>
+                            <input type="text" class="form-control" id="teacherId" value="<?php echo $row['Name'] ?>" name="teacher_name" readonly required>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Salary Card -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Salary</h5>
-                            <p class="card-text">Know your Salary.</p>
-                            <a href="teacher_salary.php" class="btn btn-info">Go to Salary page</a>
+                        <textarea name="message" placeholder="Type your message here"></textarea>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Send Message</button>
                         </div>
-                    </div>
-                </div>
+                    </form>
             </div>
-
-            <div class="row g-3 mt-3">
-                <!-- Assessment Tools Card -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Assessment Tools</h5>
-                            <p class="card-text">Create assessments and track student performance.</p>
-                            <a href="#" class="btn btn-info">Access Tools</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Leave Application -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Leave Application</h5>
-                            <p class="card-text">Do you want to take a leave?</p>
-                            <a href="Teacher-Leave.php" class="btn btn-info">Request Leave</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Messages Card -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Messages</h5>
-                            <p class="card-text">Communicate with the Admin.</p>
-                            <a href="Teacher-Msg-Admin.php" class="btn btn-info">Go to Messages</a>
-                        </div>
-                    </div>
+            
+            
+            <div class="hero">
+                <h4>Previous Messages</h4>
+                <div class="tma-p px-5 mx-5">
+                    <?php
+                
+                        $teacher_id = $row['ID'];
+                        $sql = "SELECT * FROM teacher_admin_messages WHERE teacher_id = ?";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("i", $teacher_id);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+                        
+                        if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<div>";
+                                        echo "<h3>Message: " . $row['message'] . "</h3>";
+                                        echo "<p>Sent At: " . $row['sent_at'] . "</p>";
+                                        if ($row['reply']) {
+                                            echo "<h3>Admin Reply: " . $row['reply'] . "</h3>";
+                                            echo "<p>Replied At: " . $row['replied_at'] . "</p>";
+                                        }
+                                        echo "</div><hr>";
+                                    }
+                                } else {
+                                    echo "No conversation history found.";
+                                }
+                        
+                        $stmt->close();
+                        $conn->close();
+                    ?>
                 </div>
             </div>
         </main>

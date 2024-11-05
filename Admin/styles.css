@@ -1,0 +1,94 @@
+/* Additional Custom Styles */
+.table {
+    margin-top: 20px; /* Space above table */
+}
+
+/* Button styles for edit/delete */
+.btn {
+    margin-right: 5px; /* Space between buttons */
+}
+
+/* Navbar and sidebar text styles */
+.navbar-dark .nav-link {
+    color: rgba(255, 255, 255, 0.9); /* Brighter navbar links */
+}
+
+.navbar-dark .nav-link:hover {
+    color: #FFC107; /* Hover color for navbar links */
+}
+
+.sidebar-dark-primary .nav-link.active {
+    background-color: #6C63FF; /* Active sidebar link color */
+}
+
+/* Card styles */
+.card-header {
+    background-color: #6C63FF; /* Card header background */
+    color: white; /* Card header text color */
+}
+/* /////////////////////////////////////////////////////////////// */
+
+.body-vtma {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container-vtma {
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+.h1-vtma {
+    text-align: center;
+    color: #333;
+}
+.message-card-vtma {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.message-card-vtma p {
+    margin: 5px 0;
+    color: #555;
+}
+.message-card-vtma p span {
+    font-weight: bold;
+    color: #333;
+}
+.reply-form-vtma textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: vertical;
+    font-size: 14px;
+}
+.reply-form-vtma button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.reply-form-vtma button:hover {
+    background-color: #45a049;
+}
+.no-messages-vtma {
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+    margin-top: 20px;
+}
