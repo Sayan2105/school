@@ -15,20 +15,20 @@ try {
 
     // Sample timetable data for each teacher
     $data = [
-        ['class_id' => 1, 'class_name' => 'Mathematics', 'schedule' => '2024-11-06 08:00:00', 'room_number' => 'A101'],
-        ['class_id' => 2, 'class_name' => 'Science', 'schedule' => '2024-11-06 10:00:00', 'room_number' => 'B201'],
-        ['class_id' => 3, 'class_name' => 'History', 'schedule' => '2024-11-06 12:00:00', 'room_number' => 'C301'],
-        ['class_id' => 4, 'class_name' => 'English', 'schedule' => '2024-11-07 09:00:00', 'room_number' => 'D101'],
-        ['class_id' => 5, 'class_name' => 'Chemistry', 'schedule' => '2024-11-07 11:00:00', 'room_number' => 'E202'],
-        ['class_id' => 6, 'class_name' => 'Physics', 'schedule' => '2024-11-08 14:00:00', 'room_number' => 'F303'],
-        ['class_id' => 7, 'class_name' => 'Geography', 'schedule' => '2024-11-08 16:00:00', 'room_number' => 'G404'],
-        ['class_id' => 8, 'class_name' => 'Biology', 'schedule' => '2024-11-09 10:00:00', 'room_number' => 'H105'],
-        ['class_id' => 9, 'class_name' => 'Computer Science', 'schedule' => '2024-11-09 12:00:00', 'room_number' => 'I206'],
+        ['class_id' => 101, 'class_name' => 'Mathematics', 'schedule' => '08:00:00', 'room_number' => 'A101', 'day' => 'Monday'],
+        ['class_id' => 102, 'class_name' => 'Science', 'schedule' => '10:00:00', 'room_number' => 'B201', 'day' => 'Tuesday'],
+        ['class_id' => 103, 'class_name' => 'History', 'schedule' => '12:00:00', 'room_number' => 'C301', 'day' => 'Wednesday'],
+        ['class_id' => 104, 'class_name' => 'English', 'schedule' => '09:00:00', 'room_number' => 'D101', 'day' => 'Thursday'],
+        ['class_id' => 105, 'class_name' => 'Chemistry', 'schedule' => '11:00:00', 'room_number' => 'E202', 'day' => 'Friday'],
+        ['class_id' => 106, 'class_name' => 'Physics', 'schedule' => '14:00:00', 'room_number' => 'F303', 'day' => 'Saturday'],
+        ['class_id' => 107, 'class_name' => 'Geography', 'schedule' => '16:00:00', 'room_number' => 'G404', 'day' => 'Monday'],
+        ['class_id' => 108, 'class_name' => 'Biology', 'schedule' => '10:00:00', 'room_number' => 'H105', 'day' => 'Wednesday'],
+        ['class_id' => 109, 'class_name' => 'Computer Science', 'schedule' => '12:00:00', 'room_number' => 'I206', 'day' => 'Friday'],
     ];
 
     // Prepare the SQL statement for insertion
-    $sql = "INSERT INTO teacher_timetable (teacher_id, class_id, class_name, schedule, room_number) 
-            VALUES (:teacher_id, :class_id, :class_name, :schedule, :room_number)";
+    $sql = "INSERT INTO teacher_timetable (teacher_id, class_id, class_name, schedule, room_number, day) 
+            VALUES (:teacher_id, :class_id, :class_name, :schedule, :room_number, :day)";
     $stmt = $conn->prepare($sql);
 
     // Insert data for each teacher in the specified list
@@ -43,9 +43,10 @@ try {
             ':class_name' => $entry['class_name'],
             ':schedule' => $entry['schedule'],
             ':room_number' => $entry['room_number'],
+            ':day' => $entry['day'],
         ]);
 
-        echo "Inserted timetable entry for Teacher ID: $teacher_id, Class: {$entry['class_name']}\n";
+        echo "Inserted timetable entry for Teacher ID: $teacher_id, Class: {$entry['class_name']}, Day: {$entry['day']}\n";
     }
 
     echo "Data inserted successfully!";

@@ -95,7 +95,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Time Table</h5>
                             <p class="card-text">Manage schedules, attendance, and student rosters.</p>
-                            <a href="#" class="btn btn-info">Go to Class Management</a>
+                            <a href="timeTable.php" class="btn btn-info">Go to Class Management</a>
                         </div>
                     </div>
                 </div>
