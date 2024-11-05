@@ -47,6 +47,12 @@ $result = mysqli_query($conn, $query);
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="Teacher-leave-status.php" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>leave request</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="admin_password.php" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Passwords</p>
