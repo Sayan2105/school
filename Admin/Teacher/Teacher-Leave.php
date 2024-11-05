@@ -118,11 +118,11 @@
     </form>
 </div>
 
-<div class="past-leaves">
+<div class="past-leaves hero">
     <h4>Past Leave Requests</h4>
     <table class="table table-bordered">
         <thead>
-            <tr>
+            <tr class = "text-light">
                 <th>From Date</th>
                 <th>To Date</th>
                 <th>Reason</th>
@@ -155,9 +155,9 @@
                     }
                     ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($leaveRow['start_date']); ?></td>
-                        <td><?php echo htmlspecialchars($leaveRow['end_date']); ?></td>
-                        <td><?php echo htmlspecialchars($leaveRow['reason']); ?></td>
+                        <td class="text-light"><?php echo htmlspecialchars($leaveRow['start_date']); ?></td>
+                        <td class="text-light"><?php echo htmlspecialchars($leaveRow['end_date']); ?></td>
+                        <td class="text-light"><?php echo htmlspecialchars($leaveRow['reason']); ?></td>
                         <td class="<?php echo $statusClass; ?>"><?php echo htmlspecialchars($leaveRow['status']); ?></td>
                     </tr>
                     <?php
@@ -195,11 +195,11 @@
             if ($leaveResult->num_rows > 0) {
                 while ($leaveRow = $leaveResult->fetch_assoc()) {
                     echo "<tr>
-                            <td>{$leaveRow['start_date']}</td>
-                            <td>{$leaveRow['end_date']}</td>
-                            <td>{$leaveRow['reason']}</td>
-                            <td>{$leaveRow['status']}</td>
-                          </tr>";
+                        <td>{$leaveRow['start_date']}</td>
+                        <td>{$leaveRow['end_date']}</td>
+                        <td>{$leaveRow['reason']}</td>
+                        <td>{$leaveRow['status']}</td>
+                        </tr>";
                 }
             } else {
                 echo "<tr><td colspan='4'>No past leaves found.</td></tr>";

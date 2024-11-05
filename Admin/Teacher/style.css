@@ -1,7 +1,7 @@
 /* Dark Mode Base */
 body {
     /* background-color: #121212; */
-    background: linear-gradient(135deg, #121212, rgba(255, 252, 252, 0.945));
+    background: linear-gradient(135deg, #121212, rgba(71, 71, 71, 0.945));
 
     color: #e0e0e0;
     font-family: 'Roboto', sans-serif;
