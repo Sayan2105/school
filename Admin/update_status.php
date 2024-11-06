@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $new_status = $_POST['status'];
 
     // Update the leave request status
-    $updateQuery = "UPDATE leaveapplications SET status = ? WHERE teacher_id = ?";
+    $updateQuery = "UPDATE leaveapplications SET status = ? WHERE leave_id = ?";
     $stmt = $conn->prepare($updateQuery);
     $stmt->bind_param("si", $new_status, $request_id);
 
