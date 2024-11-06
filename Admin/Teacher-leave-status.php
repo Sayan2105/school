@@ -19,50 +19,9 @@ $result = $stmt->get_result();
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-        }
-        .main-header {
-            background-color: #343a40;
-            padding: 10px;
-            width: 85vw;
-        }
-        .navbar-nav .nav-link {
-            color: #ffffff;
-        }
-        .brand-link {
-            color: #ffffff;
-            font-weight: bold;
-            padding: 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #343a40;
-            text-decoration: none;
-        }
-        .container-fluid {
-            margin-left: 250px;
-            padding: 20px;
-            width: 86vw;
-        }
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .table thead {
-            background-color: #343a40;
-            color: #fff;
-        }
-        .table tbody tr:hover {
-            background-color: #f1f1f1;
-        }
-        .status-approved { color: #28a745; font-weight: 600; }
-        .status-pending { color: #ffc107; font-weight: 600; }
-        .status-rejected { color: #dc3545; font-weight: 600; }
+        
     </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -70,7 +29,7 @@ $result = $stmt->get_result();
 <div class="wrapper">
 
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-dark">
+    <!-- <nav class="main-header navbar navbar-expand navbar-dark">
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
                 <a class="nav-link" href="../Login.php">
@@ -78,10 +37,10 @@ $result = $stmt->get_result();
                 </a>
             </li>
         </ul>
-    </nav>
+    </nav> -->
 
     <!-- Sidebar -->
-    <aside class="main-sidebar sidebar-dark-primary">
+    <!-- <aside class="main-sidebar sidebar-dark-primary">
         <a href="admin_dashboard.php" class="brand-link">
             <span class="admin-dshbrd">Admin Dashboard</span>
         </a>
@@ -139,9 +98,14 @@ $result = $stmt->get_result();
                 </ul>
             </nav>
         </div>
-    </aside>
+    </aside> -->
 
-    <div class="container-fluid">
+
+    <?php
+        include('Sidebar-Nav.php');
+    ?>
+
+    <div class="container-fluid-tls">
         <div class="card p-4">
             <h2 class="text-center">Teacher Leave Requests</h2>
             <table class="table table-bordered table-hover">

@@ -1,24 +1,8 @@
 <?php
-// Start session to check if admin is logged in
 session_start();
-// if (!isset($_SESSION['admin_logged_in'])) {
-//     header("Location: Login.php");
-//     exit();
-// }
+// Start session to check if admin is logged in
 
-// Include database connection
-$servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "school"; 
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('database.php');
 
 // Fetch data from the database
 $query = "SELECT * FROM messages"; 
@@ -36,69 +20,16 @@ $result = mysqli_query($conn, $query);
     <link rel="stylesheet" href="AdminLTE-3.1.0/dist/css/adminlte.min.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-        <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../Login.php">Logout</a>
-                </li>
-            </ul>
-        </nav>
-        
-        <!-- Sidebar -->
-        <aside class="main-sidebar sidebar-dark-primary">
-            <a href="admin_dashboard.php" class="brand-link">
-                <span class="admin-dshbrd">Admin Dashboard</span>
-            </a>
-            <div class="sidebar">
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
-                        <li class="nav-item">
-                            <a href="adminMain.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_password.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Passwords</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_admission.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Admission</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_messages.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Messages</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_Students.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Students</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="textList.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Website Contents</p>
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </aside>
+        <!-- Navbar and Sidebar -->
+        <?php include('Sidebar-Nav.php'); ?>
  
         <!-- Content Wrapper -->
         <div class="content-wrapper">

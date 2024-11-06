@@ -35,68 +35,15 @@ $result = mysqli_query($conn, $query);
     <link rel="stylesheet" href="AdminLTE-3.1.0/dist/css/adminlte.min.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-        <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../Login.php">Logout</a>
-                </li>
-            </ul>
-        </nav>
-        
-        <!-- Sidebar -->
-        <aside class="main-sidebar sidebar-dark-primary">
-            <a href="admin_dashboard.php" class="brand-link">
-                <span class="admin-dshbrd">Admin Dashboard</span>
-            </a>
-            <div class="sidebar">
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
-                        <li class="nav-item">
-                            <a href="adminMain.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_password.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Passwords</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_admission.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Admission</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_messages.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Messages</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin_Students.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Students</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="textList.php" class="nav-link"  >
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Website Contents</p>
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </aside>
+
+    <!-- Sidebar And Navbar -->
+        <?php include('Sidebar-Nav.php'); ?>
  
 
         <!-- Content Wrapper -->
@@ -155,8 +102,10 @@ $result = mysqli_query($conn, $query);
     </div>
 
     <!-- AdminLTE JS -->
-    <script src="AdminLTE-3.1.0/plugins/jquery/jquery.min.js"></script>
-    <script src="AdminLTE-3.1.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="path/to/AdminLTE/js/adminlte.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/js/adminlte.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>

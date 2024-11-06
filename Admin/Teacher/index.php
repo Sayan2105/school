@@ -24,6 +24,7 @@
     <title>Teacher Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
@@ -82,13 +83,13 @@
             </div>
 
             <div class="row g-3 mt-3">
-                <!-- Assessment Tools Card -->
+                <!-- Calendar Card -->
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Assessment Tools</h5>
-                            <p class="card-text">Create assessments and track student performance.</p>
-                            <a href="#" class="btn btn-info">Access Tools</a>
+                            <h5 class="card-title">Calendar</h5>
+                            <p class="card-text">See this months calendar</p>
+                            <a href="../Disp-calendar.php" class="btn btn-info">Go to Calendar.</a>
                         </div>
                     </div>
                 </div>
