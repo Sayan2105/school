@@ -38,25 +38,42 @@
 <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="container col-md-6 login-form-div">
         <h2 class="text-center mt-5">Signup Form</h2>
-        <form action="CheckPassword.php" method="POST" class="mt-4">
+        <form action="SignupStudentInsert.php" method="POST" class="mt-4">
             <div class="mb-4">
-                <label for="Name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="Name" name="Name" required>
+                <label for="FName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="FName" name="FName" required>
+            </div>
+            <div class="mb-4">
+                <label for="LName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="LName" name="LName" required>
             </div>
 
             <div class="mb-4">
                 <label for="role" class="form-label">Role</label>
                 <select class="form-select" id="role" name="role" required>
                     <option value="" disabled selected>Select your role</option>
-                    <option value="Admin">Admin</option>
-                    <option value="Teacher">Teacher</option>
                     <option value="Student">Student</option>
                 </select>
             </div>
 
+            <div class="mb-4">
+                <label for="Class" class="form-label">Class</label>
+                <input type="int" class="form-control" id="Class" name="Class" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="Email" name="Email" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="Phone" class="form-label">Phone Number</label>
+                <input type="int" class="form-control" id="Phone" name="Phone" required>
+            </div>
+
             <div class="mb-3">
                 <label for="Password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="Password" name="password" required>
+                <input type="password" class="form-control" id="user_Password" name="Upassword" required>
             </div>
             
             <div class="mb-3">

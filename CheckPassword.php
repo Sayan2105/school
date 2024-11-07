@@ -14,13 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Database connection
-        $servername = "localhost";
-        $username = "root";
-        $db_password = ""; 
-        $dbname = "school";
-
-        // Create a connection
-        $conn = new mysqli($servername, $username, $db_password, $dbname);
+        include('databaseConn.php');
 
         // Check connection
         if ($conn->connect_error) {

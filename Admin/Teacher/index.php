@@ -38,7 +38,7 @@
         <main class="col-md-9 col-lg-10 main-content">
             <div class="header">
                 <h2>Welcome, <?php echo $row['Name'] ?> !</h2>
-                <p>Your weekly time table is here.</p>
+                <p>This is your main Dashboard.</p>
             </div>
 
             <!-- Hero Section -->

@@ -1,0 +1,247 @@
+/* Import Bootstrap */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+/* Color and Font Variables */
+:root {
+    --primary-color: #2b6777;      /* Dark teal */
+    --secondary-color: #52ab98;    /* Teal */
+    --background-color: #f0f4f8;   /* Light gray */
+    --gradient-color: linear-gradient(135deg, #2b6777, #52ab98);
+    --text-color: #333;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header */
+.header {
+    background: var(--gradient-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Navigation Menu */
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+    background-color: var(--background-color);
+}
+
+.nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Dashboard and Page Layout */
+.dashboard-overview, .profile-section, .enrollments-section, .assignments-section, .grades-section, .resources-section, .notifications-section, .support-section {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Overview Cards */
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--secondary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Tables (Using Bootstrap) */
+table.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Buttons (Using Bootstrap) */
+.btn-primary, .btn-success, .btn-danger {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-danger:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Forms */
+.form-group label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-control {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Notifications */
+.notifications-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications-section ul li {
+    padding: 10px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--gradient-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--secondary-color);
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    display: block;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.sidebar a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.container {
+    margin-left: 270px;  /* Push content to the right to avoid overlap */
+    transition: margin-left 0.3s;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .container {
+        margin-left: 0;
+    }
+
+    .sidebar a {
+        padding: 8px 15px;
+    }
+}
