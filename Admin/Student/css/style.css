@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+p {
+    font-size: 1.1em; 
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+a{
+    font-size: 1em;
+    font-weight: 600;
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.header:hover{
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.hero:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Details Grid */
+.hero-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 25px;
+}
+
+.hero-details h5 {
+    grid-column: span 2; /* Full width for the name */
+    font-size: 1.75em;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-details p {
+    font-size: 1.15em; 
+    font-weight: 600; 
+    color: #555;
+}
+
+
+.rest{
+    margin: 40px;
+}
+
+main{
+    margin-left: 40px;
+}
+
+/* CARD */
+.card{
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.151);
+    transition: box-shadow 0.7s ease;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.671);
+}
+
+.card-title{
+    font-size: 1.75em;
+    /* font-weight: 560; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Strong weight for all headers */
+    color: #222;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-details h5 {
+        font-size: 1.4em;
+    }
+
+    .hero-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional Styling for Overall Professional Look */
+h5, p {
+    line-height: 1.6;
+}
+
+.hero p {
+    font-weight: 500;
+}
+
+.stl-main{
+    margin-left: 400px;
+}

@@ -33,12 +33,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['ID'] = $ID;
             $_SESSION['Name'] = $name;
 
-            if($role === 'Student')
-                header("Location: Admin/Student/index.php");
+            if($role === 'Student'){
+                header("Location: Admin/Student/StudentIndex.php");
+                
+            }
 
-            if($role === 'Teacher')
+            if($role === 'Teacher'){
                 header("Location: Admin/Teacher/index.php");
                 echo "Name " . $_SESSION['Name'];
+            }
 
             if($role === 'Admin')
                 header("Location: Admin/adminMain.php");
@@ -47,8 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Invalid password. Correct password is: ";
             echo $Correct_password;
         }
-    } else {
-        echo "Invalid Name or Role.";
+    // } else {
+    //     echo "Invalid Name or Role.";
     }
 
     $stmt->close();

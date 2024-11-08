@@ -5,7 +5,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Class = $_POST['Class'];
     $Email = $_POST['Email'];
     $Phone = $_POST['Phone'];
-    $user_password = $_POST['password'];
+    $Age = $_POST['Age'];
+    $Gender = $_POST['Gender'];
+    $Address = $_POST['Address'];
+    $user_password = $_POST['Upassword'];
     $confirmPassword = $_POST['CPassword'];
 
     if ($user_password === $confirmPassword) {
@@ -20,9 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $conn->begin_transaction();
 
             // Prepare the SQL statement for the students table
-            $sql = "INSERT INTO students (first_name, last_name, class_id, email, phone, Password) VALUES (?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO students (first_name, last_name, Class, Age, Address, Gender, email, phone, Password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("ssisis", $FName, $LName, $Class, $Email, $Phone, $user_password);
+            $stmt->bind_param("ssiisssis", $FName, $LName, $Class, $Age, $Address, $Gender, $Email, $Phone, $user_password);
 
             // Prepare and bind for the login table
             $query_login = "INSERT INTO login (Name, Role, Password) VALUES (?, ?, ?)";

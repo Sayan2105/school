@@ -128,46 +128,6 @@
     </table>
 </div>
 
-<!-- 
-<div class="past-leaves">
-    <h4>Past Leaves</h4>
-    <table class="table table-dark">
-        <thead>
-            <tr>
-                <th scope="col">From Date</th>
-                <th scope="col">To Date</th>
-                <th scope="col">Reason</th>
-                <th scope="col">Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            // Query to fetch past leave records
-            $leaveQuery = "SELECT * FROM leaveapplications WHERE teacher_id = ?";
-            $leaveStmt = $conn->prepare($leaveQuery);
-            $leaveStmt->bind_param("i", $row['ID']);
-            $leaveStmt->execute();
-            $leaveResult = $leaveStmt->get_result();
-
-            // Displaying past leave records
-            if ($leaveResult->num_rows > 0) {
-                while ($leaveRow = $leaveResult->fetch_assoc()) {
-                    echo "<tr>
-                        <td>{$leaveRow['start_date']}</td>
-                        <td>{$leaveRow['end_date']}</td>
-                        <td>{$leaveRow['reason']}</td>
-                        <td>{$leaveRow['status']}</td>
-                        </tr>";
-                }
-            } else {
-                echo "<tr><td colspan='4'>No past leaves found.</td></tr>";
-            }
-            ?>
-        </tbody>
-    </table>
-</div> -->
-
-
         </main>
     </div>
 </div>
