@@ -16,29 +16,7 @@ $errorMessage = "";
 <body class="Contact-b">
 
     <!-- Nav Start -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">The School</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#contact">Contact</a></li>
-                </ul>
-                <div class="d-flex">
-                    <button type="button" class="btn btn-outline-light me-2" onclick="window.open('Login.php')">Login</button>
-                    <button type="button" class="btn btn-warning" onclick="window.open('Admission.php')">Get your Admission</button>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- Nav End -->
-
+    <?php include('navbar.php'); ?>
 
     <!-- Contact Us Start -->
     <div class="container mt-5">
@@ -92,7 +70,7 @@ $errorMessage = "";
                     <a href="https://www.facebook.com/" target = "_blank">Facebook</a> | <a href="https://twitter.com/?lang=en" target = "_blank">Twitter</a> | <a href="https://www.instagram.com/accounts/login/" target = "_blank">Instagram</a>
                 </p>
                 <h5>Office Hours</h5>
-                <p>Monday - Friday: 9 AM - 6 PM</p>
+                <p>Monday - Saturday: 9 AM - 6 PM</p>
             </div>
         </div>
 

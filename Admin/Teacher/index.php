@@ -23,7 +23,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="Teacherstyle.css"> -->
+    <?php include('includeHeader.php'); ?>
 </head>
 <body>
 
@@ -38,7 +39,7 @@
         <main class="col-md-9 col-lg-10 main-content">
             <div class="header">
                 <h2>Welcome, <?php echo $row['Name'] ?> !</h2>
-                <p>This is your main Dashboard.</p>
+                <p>This is your main.</p>
             </div>
 
             <!-- Hero Section -->

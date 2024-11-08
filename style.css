@@ -1,6 +1,7 @@
 body {
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
+    font-size: larger;
 }
 .section {
     padding: 60px 0;
@@ -83,8 +84,19 @@ body {
 
 .navbar {
     background-color: #343a40 ;
+    width: 100vw;
+    z-index: 20;
     position: fixed;
+    box-shadow: 0 7px 30px #4e5863c0;
+    margin: 0;
+    height: 70px;
 }
+
+.main_content{
+    /* margin-bottom: 80px; */
+    padding-top: 50px;
+}
+
 .card {
     transition: transform 0.2s;
     border: none;
