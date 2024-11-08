@@ -36,13 +36,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="admin_admission.php" class="nav-link">
+                        <a href="../../knowMore.php" class="nav-link">
                             <i class="nav-icon fas fa-user-graduate"></i>
-                            <p>Admissions</p>
+                            <p>Events</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="admin_messages.php" class="nav-link">
+                        <a href="../Disp-calendar.php" class="nav-link">
                             <i class="nav-icon fas fa-envelope"></i>
                             <p>Calendar</p>
                         </a>
@@ -54,7 +54,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="textList.php" class="nav-link">
+                        <a href="Student-Msg-Admin.php" class="nav-link">
                             <i class="nav-icon fas fa-file-alt"></i>
                             <p>Messages</p>
                         </a>

@@ -1,7 +1,4 @@
 <?php
-
-
-
 class Calendar {
 
     private $active_year, $active_month, $active_day;

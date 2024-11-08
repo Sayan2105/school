@@ -10,7 +10,7 @@
             <a class="nav-link" href="timeTable.php">Class Management</a>
         </li>
         <li class="nav-item d-flex align-items-center">
-            <i class="fa-solid fa-user-large me-2 "></i>            
+            <i class="fa-solid fa-user-large me-2 "></i>
             <a class="nav-link" target="_blank" href="../admin_Students.php">Student Performance</a>
         </li>
         <li class="nav-item d-flex align-items-center">

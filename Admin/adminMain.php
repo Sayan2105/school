@@ -93,6 +93,18 @@ $result = mysqli_query($conn, $query);
                                 <p>Add Events</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="view_teacher_messages.php" class="nav-link">
+                                
+                                <p>View Teacher Messages</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="viewStudentMsg.php" class="nav-link">
+                                
+                                <p>View Student Messages</p>
+                            </a>
+                        </li>
                         
                                     </ul>
                                 </div>

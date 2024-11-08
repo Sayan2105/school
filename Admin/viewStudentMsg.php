@@ -32,11 +32,11 @@ $result = $conn->query($sql);
                 <div class="message-card-vtma">
                     <p><span>From Teacher ID:</span> <?= htmlspecialchars($row['StudentID']) ?></p>
                     <p><span>Teacher Name:</span> <?= htmlspecialchars($row['Student_Name']) ?></p>
-                    <p><span>Message:</span> <?= nl2br(htmlspecialchars($row['Date'])) ?></p>
-                    <p><span>Sent At:</span> <?= htmlspecialchars($row['Body']) ?></p>
+                    <p><span>Message</span> <?= htmlspecialchars($row['Body']) ?></p>
+                    <p><span>Msg ID: </span> <?= htmlspecialchars($row['ID']) ?> </p>
                     
-                    <form action="reply_student_message.php" method="POST" class="reply-form-vtma">
-                        <input type="hidden" name="message_id" value="<?= htmlspecialchars($row['message_id']) ?>">
+                    <form action="replyStudent.php" method="POST" class="reply-form-vtma">
+                        <input type="hidden" name="message_id" value="<?= htmlspecialchars($row['ID']) ?>">
                         <textarea name="reply" placeholder="Type your reply here" rows="3" required></textarea>
                         <button type="submit">Reply</button>
                     </form>

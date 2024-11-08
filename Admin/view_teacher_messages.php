@@ -34,7 +34,8 @@ $result = $conn->query($sql);
                     <p><span>Teacher Name:</span> <?= htmlspecialchars($row['teacher_Name']) ?></p>
                     <p><span>Message:</span> <?= nl2br(htmlspecialchars($row['message'])) ?></p>
                     <p><span>Sent At:</span> <?= htmlspecialchars($row['sent_at']) ?></p>
-                    
+                    <p><span>Msg ID: </span><?= htmlspecialchars($row['message_id']) ?> </p>
+
                     <form action="reply_vt_message.php" method="POST" class="reply-form-vtma">
                         <input type="hidden" name="message_id" value="<?= htmlspecialchars($row['message_id']) ?>">
                         <textarea name="reply" placeholder="Type your reply here" rows="3" required></textarea>

@@ -63,7 +63,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Calendar</h5>
                                 <p class="card-text">See this months calendar</p>
-                                <a href="Disp-calendar.php" class="btn btn-info">Go to Calendar.</a>
+                                <a href="../Disp-calendar.php" class="btn btn-info">Go to Calendar.</a> 
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Messages</h5>
                                 <p class="card-text">Communicate with the Admin.</p>
-                                <a href="Teacher-Msg-Admin.php" class="btn btn-info">Go to Messages</a>
+                                <a href="Student-Msg-Admin.php" class="btn btn-info">Go to Messages</a>
                             </div>
                         </div>
                     </div>
